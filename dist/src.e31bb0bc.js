@@ -434,6 +434,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       }).join('/'));
     };
 
+
 // path.relative(from, to)
 // posix version
     exports.relative = function(from, to) {
@@ -2842,7 +2843,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
       var hostname = '' || location.hostname;
       var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-      var ws = new WebSocket(protocol + '://' + hostname + ':' + '57331' + '/');
+      var ws = new WebSocket(protocol + '://' + hostname + ':' + '56246' + '/');
       ws.onmessage = function(event) {
         checkedAssets = {};
         assetsToAccept = [];
@@ -2993,5 +2994,5 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       }
     }
   }, {}],
-}, {}, ['../node_modules/parcel/src/builtins/hmr-runtime.js', 'index.js'], null);
+}, {}, ['../node_modules/parcel/src/builtins/hmr-runtime.js', 'index.js'], null)
 //# sourceMappingURL=/src.e31bb0bc.js.map

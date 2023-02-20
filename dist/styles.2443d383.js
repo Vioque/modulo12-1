@@ -216,7 +216,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
       var hostname = '' || location.hostname;
       var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-      var ws = new WebSocket(protocol + '://' + hostname + ':' + '57331' + '/');
+      var ws = new WebSocket(protocol + '://' + hostname + ':' + '56246' + '/');
       ws.onmessage = function(event) {
         checkedAssets = {};
         assetsToAccept = [];
@@ -367,5 +367,5 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       }
     }
   }, {}],
-}, {}, ['../node_modules/parcel/src/builtins/hmr-runtime.js'], null);
+}, {}, ['../node_modules/parcel/src/builtins/hmr-runtime.js'], null)
 //# sourceMappingURL=/styles.2443d383.js.map

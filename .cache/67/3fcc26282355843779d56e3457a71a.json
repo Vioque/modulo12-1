@@ -748,13 +748,13 @@
         }
       ],
       "sources": {
-        "pages/login/login.validations.js": "import { Validators, createFormValidation } from '@lemoncode/fonk';\r\n\r\nconst validationSchema = {\r\n  field: {\r\n    user: [\r\n      {\r\n        validator: Validators.required,\r\n        message: 'Campo requerido',\r\n      },\r\n      {\r\n        validator: Validators.email,\r\n        message: 'Email no válido',\r\n      },\r\n    ],\r\n    password: [\r\n      {\r\n        validator: Validators.required,\r\n        message: 'Campo requerido',\r\n      },\r\n    ],\r\n  },\r\n};\r\n\r\nexport const formValidation = createFormValidation(validationSchema);\r\n"
+        "pages/login/login.validations.js": "import { createFormValidation, Validators } from '@lemoncode/fonk';\n\nconst validationSchema = {\n  field: {\n    user: [\n      {\n        validator: Validators.required,\n        message: 'Campo requerido',\n      },\n      {\n        validator: Validators.email,\n        message: 'Email no válido',\n      },\n    ],\n    password: [\n      {\n        validator: Validators.required,\n        message: 'Campo requerido',\n      },\n    ],\n  },\n};\n\nexport const formValidation = createFormValidation(validationSchema);\n"
       },
       "lineCount": null
     }
   },
   "error": null,
-  "hash": "572de5ae2cab6e617cacc3d702b3d5a4",
+  "hash": "0a901ac94acf0e6ab4cc0558628d79bf",
   "cacheData": {
     "env": {}
   }

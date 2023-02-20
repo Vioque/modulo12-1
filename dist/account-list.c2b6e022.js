@@ -118,7 +118,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
 
   return newRequire;
 })({
-  '../node_modules/axios/lib/helpers/bind.js': [function(require, module, exports) {
+  "../node_modules/axios/lib/helpers/bind.js": [function(require, module, exports) {
     'use strict';
 
     module.exports = function bind(fn, thisArg) {
@@ -132,7 +132,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     };
 
   }, {}],
-  '../node_modules/axios/lib/utils.js': [function(require, module, exports) {
+  "../node_modules/axios/lib/utils.js": [function(require, module, exports) {
     'use strict';
 
     var bind = require('./helpers/bind');
@@ -477,11 +477,11 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       merge: merge,
       deepMerge: deepMerge,
       extend: extend,
-      trim: trim,
+      trim: trim
     };
 
-  }, { './helpers/bind': '../node_modules/axios/lib/helpers/bind.js' }],
-  '../node_modules/axios/lib/helpers/buildURL.js': [function(require, module, exports) {
+  }, { "./helpers/bind": "../node_modules/axios/lib/helpers/bind.js" }],
+  "../node_modules/axios/lib/helpers/buildURL.js": [function(require, module, exports) {
     'use strict';
 
     var utils = require('./../utils');
@@ -547,8 +547,8 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       return url;
     };
 
-  }, { './../utils': '../node_modules/axios/lib/utils.js' }],
-  '../node_modules/axios/lib/core/InterceptorManager.js': [function(require, module, exports) {
+  }, { "./../utils": "../node_modules/axios/lib/utils.js" }],
+  "../node_modules/axios/lib/core/InterceptorManager.js": [function(require, module, exports) {
     'use strict';
 
     var utils = require('./../utils');
@@ -568,7 +568,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     InterceptorManager.prototype.use = function use(fulfilled, rejected) {
       this.handlers.push({
         fulfilled: fulfilled,
-        rejected: rejected,
+        rejected: rejected
       });
       return this.handlers.length - 1;
     };
@@ -602,8 +602,8 @@ parcelRequire = (function(modules, cache, entry, globalName) {
 
     module.exports = InterceptorManager;
 
-  }, { './../utils': '../node_modules/axios/lib/utils.js' }],
-  '../node_modules/axios/lib/core/transformData.js': [function(require, module, exports) {
+  }, { "./../utils": "../node_modules/axios/lib/utils.js" }],
+  "../node_modules/axios/lib/core/transformData.js": [function(require, module, exports) {
     'use strict';
 
     var utils = require('./../utils');
@@ -625,8 +625,8 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       return data;
     };
 
-  }, { './../utils': '../node_modules/axios/lib/utils.js' }],
-  '../node_modules/axios/lib/cancel/isCancel.js': [function(require, module, exports) {
+  }, { "./../utils": "../node_modules/axios/lib/utils.js" }],
+  "../node_modules/axios/lib/cancel/isCancel.js": [function(require, module, exports) {
     'use strict';
 
     module.exports = function isCancel(value) {
@@ -634,7 +634,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     };
 
   }, {}],
-  '../node_modules/axios/lib/helpers/normalizeHeaderName.js': [function(require, module, exports) {
+  "../node_modules/axios/lib/helpers/normalizeHeaderName.js": [function(require, module, exports) {
     'use strict';
 
     var utils = require('../utils');
@@ -648,8 +648,8 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       });
     };
 
-  }, { '../utils': '../node_modules/axios/lib/utils.js' }],
-  '../node_modules/axios/lib/core/enhanceError.js': [function(require, module, exports) {
+  }, { "../utils": "../node_modules/axios/lib/utils.js" }],
+  "../node_modules/axios/lib/core/enhanceError.js": [function(require, module, exports) {
     'use strict';
 
     /**
@@ -687,14 +687,14 @@ parcelRequire = (function(modules, cache, entry, globalName) {
           stack: this.stack,
           // Axios
           config: this.config,
-          code: this.code,
+          code: this.code
         };
       };
       return error;
     };
 
   }, {}],
-  '../node_modules/axios/lib/core/createError.js': [function(require, module, exports) {
+  "../node_modules/axios/lib/core/createError.js": [function(require, module, exports) {
     'use strict';
 
     var enhanceError = require('./enhanceError');
@@ -714,8 +714,8 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       return enhanceError(error, config, code, request, response);
     };
 
-  }, { './enhanceError': '../node_modules/axios/lib/core/enhanceError.js' }],
-  '../node_modules/axios/lib/core/settle.js': [function(require, module, exports) {
+  }, { "./enhanceError": "../node_modules/axios/lib/core/enhanceError.js" }],
+  "../node_modules/axios/lib/core/settle.js": [function(require, module, exports) {
     'use strict';
 
     var createError = require('./createError');
@@ -737,13 +737,13 @@ parcelRequire = (function(modules, cache, entry, globalName) {
           response.config,
           null,
           response.request,
-          response,
+          response
         ));
       }
     };
 
-  }, { './createError': '../node_modules/axios/lib/core/createError.js' }],
-  '../node_modules/axios/lib/helpers/isAbsoluteURL.js': [function(require, module, exports) {
+  }, { "./createError": "../node_modules/axios/lib/core/createError.js" }],
+  "../node_modules/axios/lib/helpers/isAbsoluteURL.js": [function(require, module, exports) {
     'use strict';
 
     /**
@@ -760,7 +760,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     };
 
   }, {}],
-  '../node_modules/axios/lib/helpers/combineURLs.js': [function(require, module, exports) {
+  "../node_modules/axios/lib/helpers/combineURLs.js": [function(require, module, exports) {
     'use strict';
 
     /**
@@ -777,7 +777,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     };
 
   }, {}],
-  '../node_modules/axios/lib/core/buildFullPath.js': [function(require, module, exports) {
+  "../node_modules/axios/lib/core/buildFullPath.js": [function(require, module, exports) {
     'use strict';
 
     var isAbsoluteURL = require('../helpers/isAbsoluteURL');
@@ -800,10 +800,10 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     };
 
   }, {
-    '../helpers/isAbsoluteURL': '../node_modules/axios/lib/helpers/isAbsoluteURL.js',
-    '../helpers/combineURLs': '../node_modules/axios/lib/helpers/combineURLs.js',
+    "../helpers/isAbsoluteURL": "../node_modules/axios/lib/helpers/isAbsoluteURL.js",
+    "../helpers/combineURLs": "../node_modules/axios/lib/helpers/combineURLs.js"
   }],
-  '../node_modules/axios/lib/helpers/parseHeaders.js': [function(require, module, exports) {
+  "../node_modules/axios/lib/helpers/parseHeaders.js": [function(require, module, exports) {
     'use strict';
 
     var utils = require('./../utils');
@@ -814,7 +814,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       'age', 'authorization', 'content-length', 'content-type', 'etag',
       'expires', 'from', 'host', 'if-modified-since', 'if-unmodified-since',
       'last-modified', 'location', 'max-forwards', 'proxy-authorization',
-      'referer', 'retry-after', 'user-agent',
+      'referer', 'retry-after', 'user-agent'
     ];
 
     /**
@@ -858,8 +858,8 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       return parsed;
     };
 
-  }, { './../utils': '../node_modules/axios/lib/utils.js' }],
-  '../node_modules/axios/lib/helpers/isURLSameOrigin.js': [function(require, module, exports) {
+  }, { "./../utils": "../node_modules/axios/lib/utils.js" }],
+  "../node_modules/axios/lib/helpers/isURLSameOrigin.js": [function(require, module, exports) {
     'use strict';
 
     var utils = require('./../utils');
@@ -902,7 +902,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
               port: urlParsingNode.port,
               pathname: (urlParsingNode.pathname.charAt(0) === '/') ?
                 urlParsingNode.pathname :
-                '/' + urlParsingNode.pathname,
+                '/' + urlParsingNode.pathname
             };
           }
 
@@ -929,8 +929,8 @@ parcelRequire = (function(modules, cache, entry, globalName) {
         })()
     );
 
-  }, { './../utils': '../node_modules/axios/lib/utils.js' }],
-  '../node_modules/axios/lib/helpers/cookies.js': [function(require, module, exports) {
+  }, { "./../utils": "../node_modules/axios/lib/utils.js" }],
+  "../node_modules/axios/lib/helpers/cookies.js": [function(require, module, exports) {
     'use strict';
 
     var utils = require('./../utils');
@@ -971,7 +971,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
 
             remove: function remove(name) {
               this.write(name, '', Date.now() - 86400000);
-            },
+            }
           };
         })() :
 
@@ -980,13 +980,13 @@ parcelRequire = (function(modules, cache, entry, globalName) {
           return {
             write: function write() {},
             read: function read() { return null; },
-            remove: function remove() {},
+            remove: function remove() {}
           };
         })()
     );
 
-  }, { './../utils': '../node_modules/axios/lib/utils.js' }],
-  '../node_modules/axios/lib/adapters/xhr.js': [function(require, module, exports) {
+  }, { "./../utils": "../node_modules/axios/lib/utils.js" }],
+  "../node_modules/axios/lib/adapters/xhr.js": [function(require, module, exports) {
     'use strict';
 
     var utils = require('./../utils');
@@ -1044,7 +1044,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
             statusText: request.statusText,
             headers: responseHeaders,
             config: config,
-            request: request,
+            request: request
           };
 
           settle(resolve, reject, response);
@@ -1169,16 +1169,16 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     };
 
   }, {
-    './../utils': '../node_modules/axios/lib/utils.js',
-    './../core/settle': '../node_modules/axios/lib/core/settle.js',
-    './../helpers/buildURL': '../node_modules/axios/lib/helpers/buildURL.js',
-    '../core/buildFullPath': '../node_modules/axios/lib/core/buildFullPath.js',
-    './../helpers/parseHeaders': '../node_modules/axios/lib/helpers/parseHeaders.js',
-    './../helpers/isURLSameOrigin': '../node_modules/axios/lib/helpers/isURLSameOrigin.js',
-    '../core/createError': '../node_modules/axios/lib/core/createError.js',
-    './../helpers/cookies': '../node_modules/axios/lib/helpers/cookies.js',
+    "./../utils": "../node_modules/axios/lib/utils.js",
+    "./../core/settle": "../node_modules/axios/lib/core/settle.js",
+    "./../helpers/buildURL": "../node_modules/axios/lib/helpers/buildURL.js",
+    "../core/buildFullPath": "../node_modules/axios/lib/core/buildFullPath.js",
+    "./../helpers/parseHeaders": "../node_modules/axios/lib/helpers/parseHeaders.js",
+    "./../helpers/isURLSameOrigin": "../node_modules/axios/lib/helpers/isURLSameOrigin.js",
+    "../core/createError": "../node_modules/axios/lib/core/createError.js",
+    "./../helpers/cookies": "../node_modules/axios/lib/helpers/cookies.js"
   }],
-  '../node_modules/process/browser.js': [function(require, module, exports) {
+  "../node_modules/process/browser.js": [function(require, module, exports) {
 
 // shim for using process in browser
     var process = module.exports = {};
@@ -1367,15 +1367,15 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       return 0;
     };
   }, {}],
-  '../node_modules/axios/lib/defaults.js': [function(require, module, exports) {
-    var process = require('process');
+  "../node_modules/axios/lib/defaults.js": [function(require, module, exports) {
+    var process = require("process");
     'use strict';
 
     var utils = require('./utils');
     var normalizeHeaderName = require('./helpers/normalizeHeaderName');
 
     var DEFAULT_CONTENT_TYPE = {
-      'Content-Type': 'application/x-www-form-urlencoded',
+      'Content-Type': 'application/x-www-form-urlencoded'
     };
 
     function setContentTypeIfUnset(headers, value) {
@@ -1448,13 +1448,13 @@ parcelRequire = (function(modules, cache, entry, globalName) {
 
       validateStatus: function validateStatus(status) {
         return status >= 200 && status < 300;
-      },
+      }
     };
 
     defaults.headers = {
       common: {
-        'Accept': 'application/json, text/plain, */*',
-      },
+        'Accept': 'application/json, text/plain, */*'
+      }
     };
 
     utils.forEach(['delete', 'get', 'head'], function forEachMethodNoData(method) {
@@ -1468,13 +1468,13 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     module.exports = defaults;
 
   }, {
-    './utils': '../node_modules/axios/lib/utils.js',
-    './helpers/normalizeHeaderName': '../node_modules/axios/lib/helpers/normalizeHeaderName.js',
-    './adapters/xhr': '../node_modules/axios/lib/adapters/xhr.js',
-    './adapters/http': '../node_modules/axios/lib/adapters/xhr.js',
-    'process': '../node_modules/process/browser.js',
+    "./utils": "../node_modules/axios/lib/utils.js",
+    "./helpers/normalizeHeaderName": "../node_modules/axios/lib/helpers/normalizeHeaderName.js",
+    "./adapters/xhr": "../node_modules/axios/lib/adapters/xhr.js",
+    "./adapters/http": "../node_modules/axios/lib/adapters/xhr.js",
+    "process": "../node_modules/process/browser.js"
   }],
-  '../node_modules/axios/lib/core/dispatchRequest.js': [function(require, module, exports) {
+  "../node_modules/axios/lib/core/dispatchRequest.js": [function(require, module, exports) {
     'use strict';
 
     var utils = require('./../utils');
@@ -1507,21 +1507,21 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       config.data = transformData(
         config.data,
         config.headers,
-        config.transformRequest,
+        config.transformRequest
       );
 
       // Flatten headers
       config.headers = utils.merge(
         config.headers.common || {},
         config.headers[config.method] || {},
-        config.headers,
+        config.headers
       );
 
       utils.forEach(
         ['delete', 'get', 'head', 'post', 'put', 'patch', 'common'],
         function cleanHeaderConfig(method) {
           delete config.headers[method];
-        },
+        }
       );
 
       var adapter = config.adapter || defaults.adapter;
@@ -1533,7 +1533,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
         response.data = transformData(
           response.data,
           response.headers,
-          config.transformResponse,
+          config.transformResponse
         );
 
         return response;
@@ -1546,7 +1546,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
             reason.response.data = transformData(
               reason.response.data,
               reason.response.headers,
-              config.transformResponse,
+              config.transformResponse
             );
           }
         }
@@ -1556,12 +1556,12 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     };
 
   }, {
-    './../utils': '../node_modules/axios/lib/utils.js',
-    './transformData': '../node_modules/axios/lib/core/transformData.js',
-    '../cancel/isCancel': '../node_modules/axios/lib/cancel/isCancel.js',
-    '../defaults': '../node_modules/axios/lib/defaults.js',
+    "./../utils": "../node_modules/axios/lib/utils.js",
+    "./transformData": "../node_modules/axios/lib/core/transformData.js",
+    "../cancel/isCancel": "../node_modules/axios/lib/cancel/isCancel.js",
+    "../defaults": "../node_modules/axios/lib/defaults.js"
   }],
-  '../node_modules/axios/lib/core/mergeConfig.js': [function(require, module, exports) {
+  "../node_modules/axios/lib/core/mergeConfig.js": [function(require, module, exports) {
     'use strict';
 
     var utils = require('../utils');
@@ -1586,7 +1586,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
         'timeout', 'withCredentials', 'adapter', 'responseType', 'xsrfCookieName',
         'xsrfHeaderName', 'onUploadProgress', 'onDownloadProgress',
         'maxContentLength', 'validateStatus', 'maxRedirects', 'httpAgent',
-        'httpsAgent', 'cancelToken', 'socketPath',
+        'httpsAgent', 'cancelToken', 'socketPath'
       ];
 
       utils.forEach(valueFromConfig2Keys, function valueFromConfig2(prop) {
@@ -1636,8 +1636,8 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       return config;
     };
 
-  }, { '../utils': '../node_modules/axios/lib/utils.js' }],
-  '../node_modules/axios/lib/core/Axios.js': [function(require, module, exports) {
+  }, { "../utils": "../node_modules/axios/lib/utils.js" }],
+  "../node_modules/axios/lib/core/Axios.js": [function(require, module, exports) {
     'use strict';
 
     var utils = require('./../utils');
@@ -1655,7 +1655,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       this.defaults = instanceConfig;
       this.interceptors = {
         request: new InterceptorManager(),
-        response: new InterceptorManager(),
+        response: new InterceptorManager()
       };
     }
 
@@ -1715,7 +1715,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       Axios.prototype[method] = function(url, config) {
         return this.request(utils.merge(config || {}, {
           method: method,
-          url: url,
+          url: url
         }));
       };
     });
@@ -1726,7 +1726,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
         return this.request(utils.merge(config || {}, {
           method: method,
           url: url,
-          data: data,
+          data: data
         }));
       };
     });
@@ -1734,13 +1734,13 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     module.exports = Axios;
 
   }, {
-    './../utils': '../node_modules/axios/lib/utils.js',
-    '../helpers/buildURL': '../node_modules/axios/lib/helpers/buildURL.js',
-    './InterceptorManager': '../node_modules/axios/lib/core/InterceptorManager.js',
-    './dispatchRequest': '../node_modules/axios/lib/core/dispatchRequest.js',
-    './mergeConfig': '../node_modules/axios/lib/core/mergeConfig.js',
+    "./../utils": "../node_modules/axios/lib/utils.js",
+    "../helpers/buildURL": "../node_modules/axios/lib/helpers/buildURL.js",
+    "./InterceptorManager": "../node_modules/axios/lib/core/InterceptorManager.js",
+    "./dispatchRequest": "../node_modules/axios/lib/core/dispatchRequest.js",
+    "./mergeConfig": "../node_modules/axios/lib/core/mergeConfig.js"
   }],
-  '../node_modules/axios/lib/cancel/Cancel.js': [function(require, module, exports) {
+  "../node_modules/axios/lib/cancel/Cancel.js": [function(require, module, exports) {
     'use strict';
 
     /**
@@ -1762,7 +1762,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     module.exports = Cancel;
 
   }, {}],
-  '../node_modules/axios/lib/cancel/CancelToken.js': [function(require, module, exports) {
+  "../node_modules/axios/lib/cancel/CancelToken.js": [function(require, module, exports) {
     'use strict';
 
     var Cancel = require('./Cancel');
@@ -1815,14 +1815,14 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       });
       return {
         token: token,
-        cancel: cancel,
+        cancel: cancel
       };
     };
 
     module.exports = CancelToken;
 
-  }, { './Cancel': '../node_modules/axios/lib/cancel/Cancel.js' }],
-  '../node_modules/axios/lib/helpers/spread.js': [function(require, module, exports) {
+  }, { "./Cancel": "../node_modules/axios/lib/cancel/Cancel.js" }],
+  "../node_modules/axios/lib/helpers/spread.js": [function(require, module, exports) {
     'use strict';
 
     /**
@@ -1852,7 +1852,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     };
 
   }, {}],
-  '../node_modules/axios/lib/axios.js': [function(require, module, exports) {
+  "../node_modules/axios/lib/axios.js": [function(require, module, exports) {
     'use strict';
 
     var utils = require('./utils');
@@ -1908,49 +1908,49 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     module.exports.default = axios;
 
   }, {
-    './utils': '../node_modules/axios/lib/utils.js',
-    './helpers/bind': '../node_modules/axios/lib/helpers/bind.js',
-    './core/Axios': '../node_modules/axios/lib/core/Axios.js',
-    './core/mergeConfig': '../node_modules/axios/lib/core/mergeConfig.js',
-    './defaults': '../node_modules/axios/lib/defaults.js',
-    './cancel/Cancel': '../node_modules/axios/lib/cancel/Cancel.js',
-    './cancel/CancelToken': '../node_modules/axios/lib/cancel/CancelToken.js',
-    './cancel/isCancel': '../node_modules/axios/lib/cancel/isCancel.js',
-    './helpers/spread': '../node_modules/axios/lib/helpers/spread.js',
+    "./utils": "../node_modules/axios/lib/utils.js",
+    "./helpers/bind": "../node_modules/axios/lib/helpers/bind.js",
+    "./core/Axios": "../node_modules/axios/lib/core/Axios.js",
+    "./core/mergeConfig": "../node_modules/axios/lib/core/mergeConfig.js",
+    "./defaults": "../node_modules/axios/lib/defaults.js",
+    "./cancel/Cancel": "../node_modules/axios/lib/cancel/Cancel.js",
+    "./cancel/CancelToken": "../node_modules/axios/lib/cancel/CancelToken.js",
+    "./cancel/isCancel": "../node_modules/axios/lib/cancel/isCancel.js",
+    "./helpers/spread": "../node_modules/axios/lib/helpers/spread.js"
   }],
-  '../node_modules/axios/index.js': [function(require, module, exports) {
+  "../node_modules/axios/index.js": [function(require, module, exports) {
     module.exports = require('./lib/axios');
-  }, { './lib/axios': '../node_modules/axios/lib/axios.js' }],
-  'pages/account-list/account-list.api.js': [function(require, module, exports) {
-    'use strict';
+  }, { "./lib/axios": "../node_modules/axios/lib/axios.js" }],
+  "pages/account-list/account-list.api.js": [function(require, module, exports) {
+    "use strict";
 
-    Object.defineProperty(exports, '__esModule', {
-      value: true,
+    Object.defineProperty(exports, "__esModule", {
+      value: true
     });
     exports.getAccountList = void 0;
-    var _axios = _interopRequireDefault(require('axios'));
+    var _axios = _interopRequireDefault(require("axios"));
 
     function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-    var url = ''.concat('http://localhost:3000/api', '/account-list');
+    var url = "".concat("http://localhost:3000/api", "/account-list");
     var getAccountList = function getAccountList() {
       return _axios.default.get(url).then(function(response) {
         return response.data;
       });
     };
     exports.getAccountList = getAccountList;
-  }, { 'axios': '../node_modules/axios/index.js' }],
-  'core/router/routes.js': [function(require, module, exports) {
-    'use strict';
+  }, { "axios": "../node_modules/axios/index.js" }],
+  "core/router/routes.js": [function(require, module, exports) {
+    "use strict";
 
-    Object.defineProperty(exports, '__esModule', {
-      value: true,
+    Object.defineProperty(exports, "__esModule", {
+      value: true
     });
     exports.routes = void 0;
 
     function _typeof(obj) {
-      '@babel/helpers - typeof';
-      return _typeof = 'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator ? function(obj) { return typeof obj; } : function(obj) { return obj && 'function' == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? 'symbol' : typeof obj; }, _typeof(obj);
+      "@babel/helpers - typeof";
+      return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(obj) { return typeof obj; } : function(obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj);
     }
 
     function ownKeys(object, enumerableOnly) {
@@ -1977,26 +1977,26 @@ parcelRequire = (function(modules, cache, entry, globalName) {
           value: value,
           enumerable: true,
           configurable: true,
-          writable: true,
+          writable: true
         });
       } else { obj[key] = value; }
       return obj;
     }
 
     function _toPropertyKey(arg) {
-      var key = _toPrimitive(arg, 'string');
-      return _typeof(key) === 'symbol' ? key : String(key);
+      var key = _toPrimitive(arg, "string");
+      return _typeof(key) === "symbol" ? key : String(key);
     }
 
     function _toPrimitive(input, hint) {
-      if (_typeof(input) !== 'object' || input === null) return input;
+      if (_typeof(input) !== "object" || input === null) return input;
       var prim = input[Symbol.toPrimitive];
       if (prim !== undefined) {
-        var res = prim.call(input, hint || 'default');
-        if (_typeof(res) !== 'object') return res;
-        throw new TypeError('@@toPrimitive must return a primitive value.');
+        var res = prim.call(input, hint || "default");
+        if (_typeof(res) !== "object") return res;
+        throw new TypeError("@@toPrimitive must return a primitive value.");
       }
-      return (hint === 'string' ? String : Number)(input);
+      return (hint === "string" ? String : Number)(input);
     }
 
     var baseRoutes = {
@@ -2004,22 +2004,22 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       accountList: '/pages/account-list/account-list.html',
       account: '/pages/account/account.html',
       movements: '/pages/movements/movements.html',
-      transfer: '/pages/transfer/transfer.html',
+      transfer: '/pages/transfer/transfer.html'
     };
     var routes = _objectSpread(_objectSpread({}, baseRoutes), {}, {
       account: function account(id) {
-        return id ? ''.concat(baseRoutes.account, '?id=').concat(id) : baseRoutes.account;
+        return id ? "".concat(baseRoutes.account, "?id=").concat(id) : baseRoutes.account;
       },
       movements: function movements(id) {
-        return id ? ''.concat(baseRoutes.movements, '?id=').concat(id) : baseRoutes.movements;
+        return id ? "".concat(baseRoutes.movements, "?id=").concat(id) : baseRoutes.movements;
       },
       transfer: function transfer(id) {
-        return id ? ''.concat(baseRoutes.transfer, '?id=').concat(id) : baseRoutes.transfer;
-      },
+        return id ? "".concat(baseRoutes.transfer, "?id=").concat(id) : baseRoutes.transfer;
+      }
     });
     exports.routes = routes;
   }, {}],
-  '../node_modules/has-symbols/shams.js': [function(require, module, exports) {
+  "../node_modules/has-symbols/shams.js": [function(require, module, exports) {
     'use strict';
 
     /* eslint complexity: [2, 18], max-statements: [2, 33] */
@@ -2078,7 +2078,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       return true;
     };
   }, {}],
-  '../node_modules/has-symbols/index.js': [function(require, module, exports) {
+  "../node_modules/has-symbols/index.js": [function(require, module, exports) {
     'use strict';
 
     var origSymbol = typeof Symbol !== 'undefined' && Symbol;
@@ -2098,8 +2098,8 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       }
       return hasSymbolSham();
     };
-  }, { './shams': '../node_modules/has-symbols/shams.js' }],
-  '../node_modules/function-bind/implementation.js': [function(require, module, exports) {
+  }, { "./shams": "../node_modules/has-symbols/shams.js" }],
+  "../node_modules/function-bind/implementation.js": [function(require, module, exports) {
     'use strict';
 
     /* eslint no-invalid-this: 1 */
@@ -2121,7 +2121,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
         if (this instanceof bound) {
           var result = target.apply(
             this,
-            args.concat(slice.call(arguments)),
+            args.concat(slice.call(arguments))
           );
           if (Object(result) === result) {
             return result;
@@ -2130,7 +2130,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
         } else {
           return target.apply(
             that,
-            args.concat(slice.call(arguments)),
+            args.concat(slice.call(arguments))
           );
         }
       };
@@ -2154,21 +2154,21 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     };
 
   }, {}],
-  '../node_modules/function-bind/index.js': [function(require, module, exports) {
+  "../node_modules/function-bind/index.js": [function(require, module, exports) {
     'use strict';
 
     var implementation = require('./implementation');
 
     module.exports = Function.prototype.bind || implementation;
 
-  }, { './implementation': '../node_modules/function-bind/implementation.js' }],
-  '../node_modules/has/src/index.js': [function(require, module, exports) {
+  }, { "./implementation": "../node_modules/function-bind/implementation.js" }],
+  "../node_modules/has/src/index.js": [function(require, module, exports) {
     'use strict';
 
     var bind = require('function-bind');
     module.exports = bind.call(Function.call, Object.prototype.hasOwnProperty);
-  }, { 'function-bind': '../node_modules/function-bind/index.js' }],
-  '../node_modules/get-intrinsic/index.js': [function(require, module, exports) {
+  }, { "function-bind": "../node_modules/function-bind/index.js" }],
+  "../node_modules/get-intrinsic/index.js": [function(require, module, exports) {
     'use strict';
 
     var undefined;
@@ -2285,7 +2285,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       '%URIError%': URIError,
       '%WeakMap%': typeof WeakMap === 'undefined' ? undefined : WeakMap,
       '%WeakRef%': typeof WeakRef === 'undefined' ? undefined : WeakRef,
-      '%WeakSet%': typeof WeakSet === 'undefined' ? undefined : WeakSet,
+      '%WeakSet%': typeof WeakSet === 'undefined' ? undefined : WeakSet
     };
 
     var doEval = function doEval(name) {
@@ -2364,7 +2364,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       '%Uint32ArrayPrototype%': ['Uint32Array', 'prototype'],
       '%URIErrorPrototype%': ['URIError', 'prototype'],
       '%WeakMapPrototype%': ['WeakMap', 'prototype'],
-      '%WeakSetPrototype%': ['WeakSet', 'prototype'],
+      '%WeakSetPrototype%': ['WeakSet', 'prototype']
     };
 
     var bind = require('function-bind');
@@ -2415,7 +2415,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
         return {
           alias: alias,
           name: intrinsicName,
-          value: value,
+          value: value
         };
       }
 
@@ -2453,8 +2453,8 @@ parcelRequire = (function(modules, cache, entry, globalName) {
         var last = $strSlice(part, -1);
         if (
           (
-            (first === '"' || first === '\'' || first === '`')
-            || (last === '"' || last === '\'' || last === '`')
+            (first === '"' || first === "'" || first === '`')
+            || (last === '"' || last === "'" || last === '`')
           )
           && first !== last
         ) {
@@ -2506,11 +2506,11 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     };
 
   }, {
-    'has-symbols': '../node_modules/has-symbols/index.js',
-    'function-bind': '../node_modules/function-bind/index.js',
-    'has': '../node_modules/has/src/index.js',
+    "has-symbols": "../node_modules/has-symbols/index.js",
+    "function-bind": "../node_modules/function-bind/index.js",
+    "has": "../node_modules/has/src/index.js"
   }],
-  '../node_modules/call-bind/index.js': [function(require, module, exports) {
+  "../node_modules/call-bind/index.js": [function(require, module, exports) {
     'use strict';
 
     var bind = require('function-bind');
@@ -2542,7 +2542,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
           $defineProperty(
             func,
             'length',
-            { value: 1 + $max(0, originalFunction.length - (arguments.length - 1)) },
+            { value: 1 + $max(0, originalFunction.length - (arguments.length - 1)) }
           );
         }
       }
@@ -2560,10 +2560,10 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     }
 
   }, {
-    'function-bind': '../node_modules/function-bind/index.js',
-    'get-intrinsic': '../node_modules/get-intrinsic/index.js',
+    "function-bind": "../node_modules/function-bind/index.js",
+    "get-intrinsic": "../node_modules/get-intrinsic/index.js"
   }],
-  '../node_modules/call-bind/callBound.js': [function(require, module, exports) {
+  "../node_modules/call-bind/callBound.js": [function(require, module, exports) {
     'use strict';
 
     var GetIntrinsic = require('get-intrinsic');
@@ -2580,11 +2580,11 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       return intrinsic;
     };
 
-  }, { 'get-intrinsic': '../node_modules/get-intrinsic/index.js', './': '../node_modules/call-bind/index.js' }],
-  '../node_modules/parcel/src/builtins/_empty.js': [function(require, module, exports) {
+  }, { "get-intrinsic": "../node_modules/get-intrinsic/index.js", "./": "../node_modules/call-bind/index.js" }],
+  "../node_modules/parcel/src/builtins/_empty.js": [function(require, module, exports) {
 
   }, {}],
-  '../node_modules/object-inspect/index.js': [function(require, module, exports) {
+  "../node_modules/object-inspect/index.js": [function(require, module, exports) {
     var hasMap = typeof Map === 'function' && Map.prototype;
     var mapSizeDescriptor = Object.getOwnPropertyDescriptor && hasMap ? Object.getOwnPropertyDescriptor(Map.prototype, 'size') : null;
     var mapSize = hasMap && mapSizeDescriptor && typeof mapSizeDescriptor.get === 'function' ? mapSizeDescriptor.get : null;
@@ -2734,7 +2734,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
         }
         if (noIndent) {
           var newOpts = {
-            depth: opts.depth,
+            depth: opts.depth
           };
           if (has(opts, 'quoteStyle')) {
             newOpts.quoteStyle = opts.quoteStyle;
@@ -2839,7 +2839,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     };
 
     function wrapQuotes(s, defaultStyle, opts) {
-      var quoteChar = (opts.quoteStyle || defaultStyle) === 'double' ? '"' : '\'';
+      var quoteChar = (opts.quoteStyle || defaultStyle) === 'double' ? '"' : "'";
       return quoteChar + s + quoteChar;
     }
 
@@ -3016,7 +3016,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
         9: 't',
         10: 'n',
         12: 'f',
-        13: 'r',
+        13: 'r'
       }[n];
       if (x) { return '\\' + x; }
       return '\\x' + (n < 0x10 ? '0' : '') + $toUpperCase.call(n.toString(16));
@@ -3055,7 +3055,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       }
       return {
         base: baseIndent,
-        prev: $join.call(Array(depth + 1), baseIndent),
+        prev: $join.call(Array(depth + 1), baseIndent)
       };
     }
 
@@ -3105,8 +3105,8 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       return xs;
     }
 
-  }, { './util.inspect': '../node_modules/parcel/src/builtins/_empty.js' }],
-  '../node_modules/side-channel/index.js': [function(require, module, exports) {
+  }, { "./util.inspect": "../node_modules/parcel/src/builtins/_empty.js" }],
+  "../node_modules/side-channel/index.js": [function(require, module, exports) {
     'use strict';
 
     var GetIntrinsic = require('get-intrinsic');
@@ -3156,7 +3156,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
         objects.next = { // eslint-disable-line no-param-reassign
           key: key,
           next: objects.next,
-          value: value,
+          value: value
         };
       }
     };
@@ -3227,24 +3227,24 @@ parcelRequire = (function(modules, cache, entry, globalName) {
             }
             listSet($o, key, value);
           }
-        },
+        }
       };
       return channel;
     };
 
   }, {
-    'get-intrinsic': '../node_modules/get-intrinsic/index.js',
-    'call-bind/callBound': '../node_modules/call-bind/callBound.js',
-    'object-inspect': '../node_modules/object-inspect/index.js',
+    "get-intrinsic": "../node_modules/get-intrinsic/index.js",
+    "call-bind/callBound": "../node_modules/call-bind/callBound.js",
+    "object-inspect": "../node_modules/object-inspect/index.js"
   }],
-  '../node_modules/qs/lib/formats.js': [function(require, module, exports) {
+  "../node_modules/qs/lib/formats.js": [function(require, module, exports) {
     'use strict';
 
     var replace = String.prototype.replace;
     var percentTwenties = /%20/g;
     var Format = {
       RFC1738: 'RFC1738',
-      RFC3986: 'RFC3986',
+      RFC3986: 'RFC3986'
     };
     module.exports = {
       'default': Format.RFC3986,
@@ -3254,13 +3254,13 @@ parcelRequire = (function(modules, cache, entry, globalName) {
         },
         RFC3986: function(value) {
           return String(value);
-        },
+        }
       },
       RFC1738: Format.RFC1738,
-      RFC3986: Format.RFC3986,
+      RFC3986: Format.RFC3986
     };
   }, {}],
-  '../node_modules/qs/lib/utils.js': [function(require, module, exports) {
+  "../node_modules/qs/lib/utils.js": [function(require, module, exports) {
     'use strict';
 
     var formats = require('./formats');
@@ -3419,9 +3419,9 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     var compact = function compact(value) {
       var queue = [{
         obj: {
-          o: value,
+          o: value
         },
-        prop: 'o',
+        prop: 'o'
       }];
       var refs = [];
       for (var i = 0; i < queue.length; ++i) {
@@ -3434,7 +3434,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
           if (typeof val === 'object' && val !== null && refs.indexOf(val) === -1) {
             queue.push({
               obj: obj,
-              prop: key,
+              prop: key
             });
             refs.push(val);
           }
@@ -3475,10 +3475,10 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       isBuffer: isBuffer,
       isRegExp: isRegExp,
       maybeMap: maybeMap,
-      merge: merge,
+      merge: merge
     };
-  }, { './formats': '../node_modules/qs/lib/formats.js' }],
-  '../node_modules/qs/lib/stringify.js': [function(require, module, exports) {
+  }, { "./formats": "../node_modules/qs/lib/formats.js" }],
+  "../node_modules/qs/lib/stringify.js": [function(require, module, exports) {
     'use strict';
 
     var getSideChannel = require('side-channel');
@@ -3495,7 +3495,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       },
       repeat: function repeat(prefix) {
         return prefix;
-      },
+      }
     };
     var isArray = Array.isArray;
     var split = String.prototype.split;
@@ -3522,7 +3522,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
         return toISO.call(date);
       },
       skipNulls: false,
-      strictNullHandling: false,
+      strictNullHandling: false
     };
     var isNonNullishPrimitive = function isNonNullishPrimitive(v) {
       return typeof v === 'string' || typeof v === 'number' || typeof v === 'boolean' || typeof v === 'symbol' || typeof v === 'bigint';
@@ -3590,7 +3590,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       if (generateArrayPrefix === 'comma' && isArray(obj)) {
         // we need to join elements in
         objKeys = [{
-          value: obj.length > 0 ? obj.join(',') || null : void undefined,
+          value: obj.length > 0 ? obj.join(',') || null : void undefined
         }];
       } else if (isArray(filter)) {
         objKeys = filter;
@@ -3651,7 +3651,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
         serializeDate: typeof opts.serializeDate === 'function' ? opts.serializeDate : defaults.serializeDate,
         skipNulls: typeof opts.skipNulls === 'boolean' ? opts.skipNulls : defaults.skipNulls,
         sort: typeof opts.sort === 'function' ? opts.sort : null,
-        strictNullHandling: typeof opts.strictNullHandling === 'boolean' ? opts.strictNullHandling : defaults.strictNullHandling,
+        strictNullHandling: typeof opts.strictNullHandling === 'boolean' ? opts.strictNullHandling : defaults.strictNullHandling
       };
     };
     module.exports = function(object, opts) {
@@ -3711,11 +3711,11 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       return joined.length > 0 ? prefix + joined : '';
     };
   }, {
-    'side-channel': '../node_modules/side-channel/index.js',
-    './utils': '../node_modules/qs/lib/utils.js',
-    './formats': '../node_modules/qs/lib/formats.js',
+    "side-channel": "../node_modules/side-channel/index.js",
+    "./utils": "../node_modules/qs/lib/utils.js",
+    "./formats": "../node_modules/qs/lib/formats.js"
   }],
-  '../node_modules/qs/lib/parse.js': [function(require, module, exports) {
+  "../node_modules/qs/lib/parse.js": [function(require, module, exports) {
     'use strict';
 
     var utils = require('./utils');
@@ -3737,7 +3737,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       parameterLimit: 1000,
       parseArrays: true,
       plainObjects: false,
-      strictNullHandling: false,
+      strictNullHandling: false
     };
     var interpretNumericEntities = function(str) {
       return str.replace(/&#(\d+);/g, function($0, numberStr) {
@@ -3827,7 +3827,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
           var index = parseInt(cleanRoot, 10);
           if (!options.parseArrays && cleanRoot === '') {
             obj = {
-              0: leaf,
+              0: leaf
             };
           } else if (!isNaN(index) && root !== cleanRoot && String(index) === cleanRoot && index >= 0 && options.parseArrays && index <= options.arrayLimit) {
             obj = [];
@@ -3919,7 +3919,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
         parameterLimit: typeof opts.parameterLimit === 'number' ? opts.parameterLimit : defaults.parameterLimit,
         parseArrays: opts.parseArrays !== false,
         plainObjects: typeof opts.plainObjects === 'boolean' ? opts.plainObjects : defaults.plainObjects,
-        strictNullHandling: typeof opts.strictNullHandling === 'boolean' ? opts.strictNullHandling : defaults.strictNullHandling,
+        strictNullHandling: typeof opts.strictNullHandling === 'boolean' ? opts.strictNullHandling : defaults.strictNullHandling
       };
     };
     module.exports = function(str, opts) {
@@ -3943,8 +3943,8 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       }
       return utils.compact(obj);
     };
-  }, { './utils': '../node_modules/qs/lib/utils.js' }],
-  '../node_modules/qs/lib/index.js': [function(require, module, exports) {
+  }, { "./utils": "../node_modules/qs/lib/utils.js" }],
+  "../node_modules/qs/lib/index.js": [function(require, module, exports) {
     'use strict';
 
     var stringify = require('./stringify');
@@ -3953,21 +3953,21 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     module.exports = {
       formats: formats,
       parse: parse,
-      stringify: stringify,
+      stringify: stringify
     };
   }, {
-    './stringify': '../node_modules/qs/lib/stringify.js',
-    './parse': '../node_modules/qs/lib/parse.js',
-    './formats': '../node_modules/qs/lib/formats.js',
+    "./stringify": "../node_modules/qs/lib/stringify.js",
+    "./parse": "../node_modules/qs/lib/parse.js",
+    "./formats": "../node_modules/qs/lib/formats.js"
   }],
-  'core/router/history.js': [function(require, module, exports) {
-    'use strict';
+  "core/router/history.js": [function(require, module, exports) {
+    "use strict";
 
-    Object.defineProperty(exports, '__esModule', {
-      value: true,
+    Object.defineProperty(exports, "__esModule", {
+      value: true
     });
     exports.history = void 0;
-    var _qs = _interopRequireDefault(require('qs'));
+    var _qs = _interopRequireDefault(require("qs"));
 
     function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3980,49 +3980,49 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       },
       getParams: function getParams() {
         return _qs.default.parse(window.location.search, {
-          ignoreQueryPrefix: true,
+          ignoreQueryPrefix: true
         });
-      },
+      }
     };
     exports.history = history;
-  }, { 'qs': '../node_modules/qs/lib/index.js' }],
-  'core/router/index.js': [function(require, module, exports) {
-    'use strict';
+  }, { "qs": "../node_modules/qs/lib/index.js" }],
+  "core/router/index.js": [function(require, module, exports) {
+    "use strict";
 
-    Object.defineProperty(exports, '__esModule', {
-      value: true,
+    Object.defineProperty(exports, "__esModule", {
+      value: true
     });
-    var _routes = require('./routes');
+    var _routes = require("./routes");
     Object.keys(_routes).forEach(function(key) {
-      if (key === 'default' || key === '__esModule') return;
+      if (key === "default" || key === "__esModule") return;
       if (key in exports && exports[key] === _routes[key]) return;
       Object.defineProperty(exports, key, {
         enumerable: true,
         get: function() {
           return _routes[key];
-        },
+        }
       });
     });
-    var _history = require('./history');
+    var _history = require("./history");
     Object.keys(_history).forEach(function(key) {
-      if (key === 'default' || key === '__esModule') return;
+      if (key === "default" || key === "__esModule") return;
       if (key in exports && exports[key] === _history[key]) return;
       Object.defineProperty(exports, key, {
         enumerable: true,
         get: function() {
           return _history[key];
-        },
+        }
       });
     });
-  }, { './routes': 'core/router/routes.js', './history': 'core/router/history.js' }],
-  'pages/account-list/account-list.helpers.js': [function(require, module, exports) {
-    'use strict';
+  }, { "./routes": "core/router/routes.js", "./history": "core/router/history.js" }],
+  "pages/account-list/account-list.helpers.js": [function(require, module, exports) {
+    "use strict";
 
-    Object.defineProperty(exports, '__esModule', {
-      value: true,
+    Object.defineProperty(exports, "__esModule", {
+      value: true
     });
     exports.addAccountRows = void 0;
-    var _router = require('../../core/router');
+    var _router = require("../../core/router");
     var getOptions = function getOptions(id) {
       var emptyOption = document.createElement('option');
       var transferOption = document.createElement('option');
@@ -4033,7 +4033,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       movementOption.value = _router.routes.movements(id);
       var select = document.createElement('select');
       select.classList.add('select');
-      select.id = 'select-'.concat(id);
+      select.id = "select-".concat(id);
       select.appendChild(emptyOption);
       select.appendChild(transferOption);
       select.appendChild(movementOption);
@@ -4072,12 +4072,12 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       });
     };
     exports.addAccountRows = addAccountRows;
-  }, { '../../core/router': 'core/router/index.js' }],
-  'pages/account-list/account-list.mappers.js': [function(require, module, exports) {
-    'use strict';
+  }, { "../../core/router": "core/router/index.js" }],
+  "pages/account-list/account-list.mappers.js": [function(require, module, exports) {
+    "use strict";
 
-    Object.defineProperty(exports, '__esModule', {
-      value: true,
+    Object.defineProperty(exports, "__esModule", {
+      value: true
     });
     exports.mapAccountListFromApiToViewModel = void 0;
     var mapAccountListFromApiToViewModel = function mapAccountListFromApiToViewModel(accountList) {
@@ -4091,30 +4091,30 @@ parcelRequire = (function(modules, cache, entry, globalName) {
         id: account.id,
         iban: account.iban,
         name: account.name,
-        balance: ''.concat(account.balance, ' \u20AC'),
-        lastTransaction: new Date(account.lastTransaction).toLocaleDateString(),
+        balance: "".concat(account.balance, " \u20AC"),
+        lastTransaction: new Date(account.lastTransaction).toLocaleDateString()
       };
     };
   }, {}],
-  'common/helpers/element.helpers.js': [function(require, module, exports) {
-    'use strict';
+  "common/helpers/element.helpers.js": [function(require, module, exports) {
+    "use strict";
 
-    Object.defineProperty(exports, '__esModule', {
-      value: true,
+    Object.defineProperty(exports, "__esModule", {
+      value: true
     });
     exports.onUpdateField = exports.onSubmitForm = exports.onSetValues = exports.onSetFormErrors = exports.onSetError = void 0;
 
     function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
-    function _nonIterableRest() { throw new TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'); }
+    function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
     function _unsupportedIterableToArray(o, minLen) {
       if (!o) return;
-      if (typeof o === 'string') return _arrayLikeToArray(o, minLen);
+      if (typeof o === "string") return _arrayLikeToArray(o, minLen);
       var n = Object.prototype.toString.call(o).slice(8, -1);
-      if (n === 'Object' && o.constructor) n = o.constructor.name;
-      if (n === 'Map' || n === 'Set') return Array.from(o);
-      if (n === 'Arguments' || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+      if (n === "Object" && o.constructor) n = o.constructor.name;
+      if (n === "Map" || n === "Set") return Array.from(o);
+      if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
     }
 
     function _arrayLikeToArray(arr, len) {
@@ -4124,7 +4124,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     }
 
     function _iterableToArrayLimit(arr, i) {
-      var _i = null == arr ? null : 'undefined' != typeof Symbol && arr[Symbol.iterator] || arr['@@iterator'];
+      var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"];
       if (null != _i) {
         var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1;
         try {
@@ -4182,7 +4182,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
       }
     };
     var setErrorMessage = function setErrorMessage(id, message) {
-      var messageElement = document.getElementById(''.concat(id, '-error'));
+      var messageElement = document.getElementById("".concat(id, "-error"));
       if (messageElement) {
         messageElement.textContent = message;
       }
@@ -4208,7 +4208,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     var onSetValue = function onSetValue(id, value) {
       var element = document.getElementById(id);
       console.log({
-        element: element,
+        element: element
       });
       if (element) {
         setValue(element, value);
@@ -4224,50 +4224,50 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     };
     exports.onSetValues = onSetValues;
   }, {}],
-  'common/helpers/index.js': [function(require, module, exports) {
-    'use strict';
+  "common/helpers/index.js": [function(require, module, exports) {
+    "use strict";
 
-    Object.defineProperty(exports, '__esModule', {
-      value: true,
+    Object.defineProperty(exports, "__esModule", {
+      value: true
     });
-    var _element = require('./element.helpers');
+    var _element = require("./element.helpers");
     Object.keys(_element).forEach(function(key) {
-      if (key === 'default' || key === '__esModule') return;
+      if (key === "default" || key === "__esModule") return;
       if (key in exports && exports[key] === _element[key]) return;
       Object.defineProperty(exports, key, {
         enumerable: true,
         get: function() {
           return _element[key];
-        },
+        }
       });
     });
-  }, { './element.helpers': 'common/helpers/element.helpers.js' }],
-  'pages/account-list/account-list.js': [function(require, module, exports) {
-    'use strict';
+  }, { "./element.helpers": "common/helpers/element.helpers.js" }],
+  "pages/account-list/account-list.js": [function(require, module, exports) {
+    "use strict";
 
-    var _accountList = require('./account-list.api');
-    var _accountList2 = require('./account-list.helpers');
-    var _accountList3 = require('./account-list.mappers');
-    var _helpers = require('../../common/helpers');
-    var _router = require('../../core/router');
+    var _accountList = require("./account-list.api");
+    var _accountList2 = require("./account-list.helpers");
+    var _accountList3 = require("./account-list.mappers");
+    var _helpers = require("../../common/helpers");
+    var _router = require("../../core/router");
     (0, _accountList.getAccountList)().then(function(accountList) {
       var viewModelAccountList = (0, _accountList3.mapAccountListFromApiToViewModel)(accountList);
       (0, _accountList2.addAccountRows)(viewModelAccountList);
       viewModelAccountList.forEach(function(account) {
-        (0, _helpers.onUpdateField)('select-'.concat(account.id), function(event) {
+        (0, _helpers.onUpdateField)("select-".concat(account.id), function(event) {
           var route = event.target.value;
           _router.history.push(route);
         });
       });
     });
   }, {
-    './account-list.api': 'pages/account-list/account-list.api.js',
-    './account-list.helpers': 'pages/account-list/account-list.helpers.js',
-    './account-list.mappers': 'pages/account-list/account-list.mappers.js',
-    '../../common/helpers': 'common/helpers/index.js',
-    '../../core/router': 'core/router/index.js',
+    "./account-list.api": "pages/account-list/account-list.api.js",
+    "./account-list.helpers": "pages/account-list/account-list.helpers.js",
+    "./account-list.mappers": "pages/account-list/account-list.mappers.js",
+    "../../common/helpers": "common/helpers/index.js",
+    "../../core/router": "core/router/index.js"
   }],
-  '../node_modules/parcel/src/builtins/hmr-runtime.js': [function(require, module, exports) {
+  "../node_modules/parcel/src/builtins/hmr-runtime.js": [function(require, module, exports) {
     var global = arguments[3];
     var OVERLAY_ID = '__parcel__error__overlay__';
     var OldModule = module.bundle.Module;
@@ -4283,7 +4283,7 @@ parcelRequire = (function(modules, cache, entry, globalName) {
         },
         dispose: function(fn) {
           this._disposeCallbacks.push(fn);
-        },
+        }
       };
       module.bundle.hotData = null;
     }
@@ -4292,9 +4292,9 @@ parcelRequire = (function(modules, cache, entry, globalName) {
     var checkedAssets, assetsToAccept;
     var parent = module.bundle.parent;
     if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
-      var hostname = '' || location.hostname;
+      var hostname = "" || location.hostname;
       var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-      var ws = new WebSocket(protocol + '://' + hostname + ':' + '57331' + '/');
+      var ws = new WebSocket(protocol + '://' + hostname + ':' + "56246" + '/');
       ws.onmessage = function(event) {
         checkedAssets = {};
         assetsToAccept = [];
@@ -4444,6 +4444,6 @@ parcelRequire = (function(modules, cache, entry, globalName) {
         return true;
       }
     }
-  }, {}],
-}, {}, ['../node_modules/parcel/src/builtins/hmr-runtime.js', 'pages/account-list/account-list.js'], null);
+  }, {}]
+}, {}, ["../node_modules/parcel/src/builtins/hmr-runtime.js", "pages/account-list/account-list.js"], null)
 //# sourceMappingURL=/account-list.c2b6e022.js.map
