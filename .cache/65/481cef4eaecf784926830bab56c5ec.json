@@ -1,0 +1,37 @@
+{
+  "id": "../node_modules/parcel/src/builtins/_empty.js",
+  "dependencies": [
+    {
+      "name": "D:\\Jorge\\Lemon Code\\Bootcamp Javascript\\Proyectos\\modulo12-banca\\package.json",
+      "includedInParent": true,
+      "mtime": 1630063490000
+    },
+    {
+      "name": "D:\\Jorge\\Lemon Code\\Bootcamp Javascript\\Proyectos\\modulo12-banca\\node_modules\\parcel\\package.json",
+      "includedInParent": true,
+      "mtime": 1671873502610
+    },
+    {
+      "name": "D:\\Jorge\\Lemon Code\\Bootcamp Javascript\\Proyectos\\modulo12-banca\\node_modules\\parcel\\src\\.babelrc",
+      "includedInParent": true,
+      "mtime": 1671873503693
+    }
+  ],
+  "generated": {
+    "js": ""
+  },
+  "sourceMaps": {
+    "js": {
+      "mappings": [],
+      "sources": {
+        "../node_modules/parcel/src/builtins/_empty.js": ""
+      },
+      "lineCount": null
+    }
+  },
+  "error": null,
+  "hash": "0823442c8fb7ad0e5733c7698593b610",
+  "cacheData": {
+    "env": {}
+  }
+}
