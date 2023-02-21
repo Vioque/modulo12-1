@@ -3906,7 +3906,7 @@ var mapMovementsFromApiToViewModel = function mapMovementsFromApiToViewModel(mov
     id: movement.accountId,
     name: movement.description,
     balance: "".concat(movement.balance, " \u20AC"),
-    lastTransaction: new Date(movement.lastTransaction).toLocaleDateString()
+    lastTransaction: new Date(movement.transaction).toLocaleDateString()
   };
 };
 },{}],"pages/movements/movements.js":[function(require,module,exports) {
@@ -3955,7 +3955,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56246" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50105" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -517,32 +517,40 @@ tr:nth-child(even) {
     max-width: 100%;
     border-radius: 0;
   }
+
   .login .btn_enviar {
     display: block;
     width: 100%;
     margin: 20px 0;
   }
+
   .usuario {
     padding-right: 0;
   }
+
   .container {
     padding: 10px;
     overflow-x: auto;
   }
+
   .form_container {
     min-width: auto;
   }
+
   .form_container label {
     text-align: left;
     width: 100%;
   }
+
   .form_container input:not(.fecha-input),
   .form_container select {
     width: 100%;
   }
+
   .form_container div {
     display: block;
   }
+
   .form_container .fecha {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -550,11 +558,13 @@ tr:nth-child(even) {
     display: -ms-flexbox;
     display: flex;
   }
+
   .btn_enviar_transferencia {
     display: block;
     width: 100%;
     margin: 20px 0;
   }
+
   select {
     padding: 1.2em 1em;
   }

@@ -7,6 +7,6 @@ const mapMovementsFromApiToViewModel = movement => {
     id: movement.accountId,
     name: movement.description,
     balance: `${movement.balance} €`,
-    lastTransaction: new Date(movement.lastTransaction).toLocaleDateString(),
+    lastTransaction: new Date(movement.transaction).toLocaleDateString(),
   };
 };
