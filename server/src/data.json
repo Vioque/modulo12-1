@@ -117,5 +117,9 @@
       "accountId": "3"
     }
   ],
-  "transfer": []
+  "transfer": [
+    {
+      "id": 1
+    }
+  ]
 }

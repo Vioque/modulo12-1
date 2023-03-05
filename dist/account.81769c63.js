@@ -6609,7 +6609,8 @@ function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _ty
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 var mapAccountFromApiToViewModel = function mapAccountFromApiToViewModel(account) {
   return _objectSpread(_objectSpread({}, account), {}, {
-    alias: account.name
+    alias: account.name,
+    balance: "".concat(account.balance, " \u20AC")
   });
 };
 exports.mapAccountFromApiToViewModel = mapAccountFromApiToViewModel;
@@ -6703,7 +6704,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62269" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53760" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

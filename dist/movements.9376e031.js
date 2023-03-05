@@ -4068,7 +4068,8 @@ function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _ty
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 var mapAccountFromApiToViewModel = function mapAccountFromApiToViewModel(account) {
   return _objectSpread(_objectSpread({}, account), {}, {
-    alias: account.name
+    alias: account.name,
+    balance: "".concat(account.balance, " \u20AC")
   });
 };
 exports.mapAccountFromApiToViewModel = mapAccountFromApiToViewModel;
@@ -4096,8 +4097,7 @@ var params = _router.history.getParams();
   (0, _movements2.addMovementRows)(viewModelMovements);
 });
 (0, _account.getAccount)(params.id).then(function (account) {
-  var viewModelAccount = (0, _account2.mapAccountFromApiToViewModel)(account); //.filter(accountId => accountId.id === params.id)
-  console.log('view', viewModelAccount, 'account', account);
+  var viewModelAccount = (0, _account2.mapAccountFromApiToViewModel)(account);
   (0, _helpers.onSetValues)(viewModelAccount);
 });
 },{"./movements.api":"pages/movements/movements.api.js","../../core/router":"core/router/index.js","./movements.helpers":"pages/movements/movements.helpers.js","./movements.mappers":"pages/movements/movements.mappers.js","../account/account.api":"pages/account/account.api.js","../../common/helpers":"common/helpers/index.js","../account/account.mappers":"pages/account/account.mappers.js"}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -4125,7 +4125,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62269" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53760" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
