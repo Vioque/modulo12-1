@@ -1,4 +1,5 @@
 import { createFormValidation, Validators } from '@lemoncode/fonk';
+import { dayValidator, monthValidator, yearValidator } from './transfer.custom.validations';
 
 const validationSchema = {
   field: {
@@ -24,6 +25,33 @@ const validationSchema = {
       {
         validator: Validators.required,
         message: 'Campo requerido',
+      },
+    ],
+    day: [
+      {
+        validator: Validators.required,
+        message: 'Campo requerido',
+      },
+      {
+        validator: dayValidator,
+      },
+    ],
+    month: [
+      {
+        validator: Validators.required,
+        message: 'Campo requerido',
+      },
+      {
+        validator: monthValidator,
+      },
+    ],
+    year: [
+      {
+        validator: Validators.required,
+        message: 'Campo requerido',
+      },
+      {
+        validator: yearValidator,
       },
     ],
     email: [

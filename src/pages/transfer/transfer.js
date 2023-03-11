@@ -2,7 +2,7 @@ import { setAccountOptions } from './transfer.helpers';
 import { getAccountList } from '../account-list/account-list.api';
 import { history } from '../../core/router';
 import { onSetError, onSetFormErrors, onSubmitForm, onUpdateField } from '../../common/helpers';
-import { formValidation } from './transfer.validation';
+import { formValidation } from './transfer.validations';
 import { insertTransfer } from './transfer.api';
 
 const params = history.getParams();
@@ -18,6 +18,7 @@ let transfer = {
   concept: '',
   email: '',
 };
+
 onUpdateField('iban', event => {
   const value = event.target.value;
 
@@ -70,6 +71,45 @@ onUpdateField('concept', event => {
   });
 });
 
+onUpdateField('day', event => {
+  const value = event.target.value;
+
+  transfer = {
+    ...transfer,
+    day: value,
+  };
+
+  formValidation.validateField('day', transfer.day).then(result => {
+    onSetError('day', result);
+  });
+});
+
+onUpdateField('month', event => {
+  const value = event.target.value;
+
+  transfer = {
+    ...transfer,
+    month: value,
+  };
+
+  formValidation.validateField('month', transfer.month).then(result => {
+    onSetError('month', result);
+  });
+});
+
+onUpdateField('year', event => {
+  const value = event.target.value;
+
+  transfer = {
+    ...transfer,
+    year: value,
+  };
+
+  formValidation.validateField('year', transfer.year).then(result => {
+    onSetError('year', result);
+  });
+});
+
 onUpdateField('email', event => {
   const value = event.target.value;
 
@@ -84,15 +124,16 @@ onUpdateField('email', event => {
 });
 
 const onSave = () => {
-  // const apiTransfer = mapAccountFromViewModelToApi(transfer);
-  // return insertTransfer(apiTransfer);
   return insertTransfer(transfer);
 };
 onSubmitForm('transfer-button', () => {
   formValidation.validateForm(transfer).then(result => {
     onSetFormErrors(result);
     if (result.succeeded) {
-      onSave().then(apiTransfer => {
+      transfer.transaction = transfer.day + transfer.month + transfer.year;
+      const { day, month, year, ...transferData } = transfer;
+      transfer = transferData;
+      onSave().then(transfer => {
         history.back();
       });
     }

@@ -119,7 +119,81 @@
   ],
   "transfer": [
     {
+      "iban": "ES99 0123 4567 8901 2345",
+      "name": "Jorge",
+      "amount": "1000",
+      "concept": "test",
+      "email": "jorge@correo.com",
       "id": 1
+    },
+    {
+      "iban": "ES11 1111 2222 3333 4444",
+      "name": "Raquel",
+      "amount": "250",
+      "concept": "test",
+      "email": "admin@correo.com",
+      "transaction": "11032023",
+      "day": "11",
+      "month": "03",
+      "year": "2023",
+      "id": 2
+    },
+    {
+      "iban": "ES22 3333 4444 5555 6666",
+      "name": "yo",
+      "amount": "560",
+      "concept": "test 3",
+      "email": "correo@correo.com",
+      "transaction": "10122023",
+      "day": "10",
+      "month": "12",
+      "year": "2023",
+      "id": 3
+    },
+    {
+      "iban": "ES00 1111 2222 3333 4444",
+      "name": "Yo",
+      "amount": "680",
+      "concept": "ingreso",
+      "email": "correo@correo.com",
+      "day": "26",
+      "month": "03",
+      "year": "2023",
+      "transaction": "26032023",
+      "id": 4
+    },
+    {
+      "iban": "es00 1111 2222 3333 7777",
+      "name": "Jorge",
+      "amount": "500",
+      "concept": "test 5",
+      "email": "email@correo.com",
+      "day": "23",
+      "month": "02",
+      "year": "2023",
+      "transaction": "23022023",
+      "id": 5
+    },
+    {
+      "iban": "ES99 98898 a98 9898",
+      "name": "98",
+      "amount": "652",
+      "concept": "test",
+      "email": "jorge@co.com",
+      "day": "23",
+      "month": "03",
+      "year": "2023",
+      "transaction": "23032023",
+      "id": 6
+    },
+    {
+      "iban": "ES00 1111 2222 3333 4444 5555",
+      "name": "Jorge",
+      "amount": "900",
+      "concept": "ingreso",
+      "email": "correo@correo.com",
+      "transaction": "31122024",
+      "id": 10
     }
   ]
 }
